@@ -1,0 +1,9 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+<% debug(params) %>
+<%= form_for :user, url: users_create_path do |f| %>
+  Username: <%= f.text_field :name %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+<% end %> 
